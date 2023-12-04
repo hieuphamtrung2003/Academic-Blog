@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/src/manager.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="image/png" href="/img/Logo.png" />
+    <title>FPTU ACADEMIC BLOG | Management Admin</title>
+</head>
+
+<body class=" bg-slate-700">
+    <!-- Header  -->
+    <header class="flex items-center justify-between w-full bg-black text-white p-1" id="header">
+        <div class="flex items-center" id="taskbar">
+            <!-- <a href="/home.html" class="items-start justify-center">
+                <img src=" ./img/Logo.png" alt="logo" class="w-16 h-auto">
+            </a> -->
+            
+            <a href="/managerAdmin.html" class="p-logo" style="font-size: 35px; font-weight: 700; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: bisque; margin-right: 10px;">
+                FPT BLOG
+            </a>
+
+            <!-- <a href="managerAdmin.html" class="p-2" style="border-left: 1px solid white;">
+                Home
+            </a> -->
+
+            <!-- <a href="bestartice.html" class="p-2">
+                Best Article
+            </a> -->
+
+            <!-- <a href="teacherPage.html" class="p-2" id="teacherPage">
+                Post Request
+            </a> -->
+
+            <!-- <a href="/giveAward.html" class="p-2" id="teacherPage2">
+                Give Award
+            </a> -->
+
+            <!-- Category  -->
+            <!-- <div class="group inline-block relative">
+                <button class="py-2 px-4 rounded inline-flex items-center" id="category">
+                    <span class="mr-1" style="font-weight: 600;">Category</span>
+                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                    </svg>
+                </button>
+                <ul class="absolute hidden text-gray-700 pt-1 group-hover:block">
+                    
+                </ul>
+            </div> -->
+        </div>
+
+        <div class="flex items-center justify-center">
+            <div class="mx-5">
+                <a href="profile.html" class="mx-5">
+                <img src="https://www.pngitem.com/pimgs/m/375-3757223_free-icon-download-people-avatar-icon-transparent-background.png"
+                    alt="logo" class="w-10 h-10 rounded-full cursor-pointer hover:scale-110">
+                </a>
+            </div>
+
+            <div class="pr-2">
+
+                <div class="cursor-pointer">
+                    <a href="/login.html">Log Out</a>
+                </div>
+
+            </div>
+        </div>
+
+        <script>
+            var prevScrollPos = window.pageYOffset;
+            var header = document.getElementById("header");
+    
+            window.onscroll = function() {
+                var currentScrollPos = window.pageYOffset;
+                
+                if (prevScrollPos > currentScrollPos) {
+                    // Scrolling up
+                    header.style.top = "0";
+                } else {
+                    // Scrolling down
+                    header.style.top = "-100px"; // Adjust the value based on your header height
+                }
+    
+                prevScrollPos = currentScrollPos;
+            }
+        </script>
+    </header>
+
+    <Main class="main">
+            <!-- Left Side -->
+            <div class="left">
+                <a href="#">
+                    <h2>
+                        <i class="fa-regular fa-rectangle-list fa-xl" style="color: #151313;"></i>
+                        System Functions
+                    </h2>
+                </a>
+
+                <div class="content" onclick="showContent('content1')">
+                    <h5 class="title-text">
+                        Article Management
+                    </h5>
+                   
+                </div>
+                <div class="content" onclick="showContent('content8')">
+                    <h5 class="title-text">
+                        User Management
+                    </h5>
+                </div>
+
+                <div class="content" onclick="showContent('content10')">
+                    <h5 class="title-text">
+                        Violation Accounts
+                    </h5>
+                </div>
+
+                <div class="content" onclick="showContent('content12')">
+                    <h5 class="title-text">
+                        Manage Award
+                    </h5>
+                </div>
+
+                <div class="content" onclick="showContent('content14')">
+                    <h5 class="title-text">
+                        Manage Report
+                    </h5>
+                </div>
+
+                <div class="content" onclick="showContent('content16')">
+                    <h5 class="title-text">
+                        Manage Teacher Category
+                    </h5>
+                </div>
+
+                <div class="content" onclick="showContent('content18')">
+                    <h5 class="title-text">
+                        Category Request
+                    </h5>
+                </div>
+                
+            </div>
+    
+            <!-- Right Side -->
+            <div class="right">
+
+                <!-- Manager Post -->
+                <!-- Funciton -->
+                <div id="content1Content" style="display: none;">
+                        
+                        <div class="frame">
+                            <div class="title">
+                                <h1>Post Management</h1>
+                            </div>
+                            
+                            <div class="article-management">
+
+                                <div id="postTable">
+
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+
+                <!-- Manager User -->
+                <!-- Funciton -->
+                <div id="content8Content" style="display: none;">
+                    
+                    <div class="frame">
+                        <div class="title">
+                            <h1>User Management</h1>
+                        </div>
+                        <div class="user-management">
+                            <!-- <div class="search-bar">
+                              
+                            </div> -->
+                          
+                              <!-- Rows -->
+                            <div id="userTable"></div>
+
+                            <style>
+                                #userTable thead th {
+                                    font-weight: bold;
+                                    padding: 8px;
+                                    border: 1px solid #ccc;
+                                }
+
+                                #userTable tbody tr td {
+                                    padding: 8px;
+                                    border: 1px solid #ccc;
+                                }
+
+                                #userTable tbody tr td button{
+                                    margin-left: 1%;
+                                    margin-right: 1%;
+                                }
+
+                            </style>
+       
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Manage Violation Accounts -->
+                <div id="content10Content" style="display: none;">
+                    
+                    <div class="frame">
+                        <div class="title">
+                            <h1>Violation Management</h1>
+                        </div>
+                        <div class="violation-management">
+                        
+                              <!-- Rows -->
+                            <div id="violationTable"></div>
+       
+                        </div>
+                    
+                    </div>
+                    <script>
+                        function showDeletePopup() {
+                            var popup = document.getElementById("deletePopup");
+                            popup.style.display = "flex";
+                        }
+                
+                        function handleConfirmDelete() {
+                            
+                        }
+                
+                        function handleCancelDelete() {
+                            var popup = document.getElementById("deletePopup");
+                            popup.style.display = "none";
+                        }
+                    </script>
+
+                </div>
+
+                <!-- Award Management -->
+                <div id="content12Content" style="display: none;">
+                    
+                    <div class="frame">
+                        <div class="title">
+                            <h1>Award Management</h1>
+                        </div>
+                        <div class="award-management">
+                        
+                              <!-- Rows -->
+                            <div id="awardTable">
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                    <style>
+                        #awardTable thead th {
+                            font-weight: bold;
+                            padding: 8px;
+                            border: 1px solid #ccc;
+                        }
+
+                        #awardTable tbody tr td {
+                            padding: 8px;
+                            border: 1px solid #ccc;
+                        }
+
+                        #awardTable tbody tr td button{
+                            margin-left: 1%;
+                            margin-right: 1%;
+                        }
+
+                    </style>
+                    <script>
+                        function showDeletePopup() {
+                            var popup = document.getElementById("deletePopup");
+                            popup.style.display = "flex";
+                        }
+                
+                        function handleConfirmDelete() {
+                            
+                        }
+                
+                        function handleCancelDelete() {
+                            var popup = document.getElementById("deletePopup");
+                            popup.style.display = "none";
+                        }
+                    </script>
+
+                </div>
+
+                <!-- Report Management -->
+                <div id="content14Content" style="display: none;">
+                    
+                                    <div class="frame">
+                                        <div class="title">
+                                            <h1>Report Management</h1>
+                                        </div>
+                                        <div class="report-management">
+                                        
+                                              <!-- Rows -->
+                                            <div id="reportTable"></div>
+
+                                            <style>
+                                                #reportTable thead th {
+                                                    font-weight: bold;
+                                                    padding: 8px;
+                                                    border: 1px solid #ccc;
+                                                }
+
+                                                #reportTable tbody tr td {
+                                                    padding: 8px;
+                                                    border: 1px solid #ccc;
+                                                }
+
+                                                #reportTable tbody tr td button{
+                                                    margin-left: 1%;
+                                                    margin-right: 1%;
+                                                }
+                                            </style>
+                                        </div>
+                
+                                    </div>
+                                    <script>
+                                        function showDeletePopup() {
+                                            var popup = document.getElementById("deletePopup");
+                                            popup.style.display = "flex";
+                                        }
+                                
+                                        function handleConfirmDelete() {
+                                            
+                                        }
+                                
+                                        function handleCancelDelete() {
+                                            var popup = document.getElementById("deletePopup");
+                                            popup.style.display = "none";
+                                        }
+                                    </script>
+                
+                </div>
+
+                <!-- Teacher Category -->
+                <div id="content16Content" style="display: none;">
+                    
+                                    <div class="frame">
+                                        <div class="title">
+                                            <h1>Category Management</h1>
+                                        </div>
+                                        <div class="category-management">
+                                        
+                                              <!-- Rows -->
+                                            <div id="categoryTable"></div>
+
+                                            <style>
+                                                #categoryTable thead th {
+                                                    font-weight: bold;
+                                                    padding: 8px;
+                                                    border: 1px solid #ccc;
+                                                }
+
+                                                #categoryTable tbody tr td {
+                                                    padding: 8px;
+                                                    border: 1px solid #ccc;
+                                                }
+
+                                                #categoryTable tbody tr td button{
+                                                    margin-left: 1%;
+                                                    margin-right: 1%;
+                                                }
+                                            </style>
+                                        </div>
+                
+                                    </div>
+                                    <script>
+                                        function showDeletePopup() {
+                                            var popup = document.getElementById("deletePopup");
+                                            popup.style.display = "flex";
+                                        }
+                                
+                                        function handleConfirmDelete() {
+                                            
+                                        }
+                                
+                                        function handleCancelDelete() {
+                                            var popup = document.getElementById("deletePopup");
+                                            popup.style.display = "none";
+                                        }
+                                    </script>
+                
+                </div>
+
+                <!-- Category Request -->
+                <div id="content18Content" style="display: none;">
+                    
+                                    <div class="frame">
+                                        <div class="title">
+                                            <h1>Category Request Management</h1>
+                                        </div>
+                                        <div class="request-management">
+                                        
+                                            <!-- Rows -->
+                                            <div id="requestTable"></div>
+
+                                            <style>
+                                                #requestTable thead th {
+                                                    font-weight: bold;
+                                                    padding: 8px;
+                                                    border: 1px solid #ccc;
+                                                }
+
+                                                #requestTable tbody tr td {
+                                                    padding: 8px;
+                                                    border: 1px solid #ccc;
+                                                }
+
+                                                #requestTable tbody tr td button{
+                                                    margin-left: 1%;
+                                                    margin-right: 1%;
+                                                }
+                                            </style>
+                                        </div>
+
+                                    </div>
+                                    <script>
+                                        function showDeletePopup() {
+                                            var popup = document.getElementById("deletePopup");
+                                            popup.style.display = "flex";
+                                        }
+                                
+                                        function handleConfirmDelete() {
+                                            
+                                        }
+                                
+                                        function handleCancelDelete() {
+                                            var popup = document.getElementById("deletePopup");
+                                            popup.style.display = "none";
+                                        }
+                                    </script>
+
+                </div>
+            </div>
+
+            <div class="right">
+            <div id="rightTitle"></div>
+    </Main>
+   
+    <!-- footer  -->
+    <footer class="bg-white rounded-lg shadow dark:bg-gray-900" id="footer">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0">
+                    <img src="./img/Logo.png" class="h-8 mr-3" alt="Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">FPT Blog</span>
+                </a>
+                <ul id="about"
+                    class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <li>
+                        <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="mr-4 hover:underline md:mr-6 ">Licensing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400" id="fpt-blog">© 2023 <a
+                    href="https://flowbite.com/" class="hover:underline">FPT Blog</a>. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+    <script type="module" src="/js/manager.js"></script>
+</body>
+<script src="/js/tailwind.config.js"></script>
+
+<script>
+    function showContent(contentId) {
+        console.log('Function called'); // Debugging line
+        // Hide all content sections on the right side
+        const rightContents = document.querySelectorAll('.right div[id$="Content"]');
+        rightContents.forEach(content => content.style.display = 'none');
+
+        // Show the selected content
+        document.getElementById(contentId + 'Content').style.display = 'block';
+        
+    }
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</html>

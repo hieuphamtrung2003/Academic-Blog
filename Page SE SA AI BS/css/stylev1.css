@@ -1,0 +1,316 @@
+.banner-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: 'Onest', sans-serif;
+    font-style: normal;
+    font-size: 50px;
+    font-weight: 700;
+    color: darkgray;
+    transform: translate(-50%, -50%);
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    padding: 10px;
+}
+
+/* .Baner {
+    background-color: beige;
+} */
+
+.Baner img {
+    max-width: auto;
+    max-height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#header {
+    height: 50px;
+}
+
+#footer {
+    /* background-color: antiquewhite; */
+    background-color: white;
+    border-top: 2px solid rgb(224, 224, 224);
+    border-radius: 0%;
+  }
+/*========================== Banner ==============================*/
+
+.FeaturedPosts h2 {
+    color: black;
+    font-family: 'Onest', sans-serif;
+    font-style: normal;
+    font-size: 30px;
+    font-weight: 700;
+    /* background-color: beige; */
+}
+.FeaturedPosts {
+    width: auto; /* Set your desired width */
+    height: auto; /* Set your desired height */
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+/*========================== FEATURED POSTS ==============================*/
+
+/* .post {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: whitesmoke;
+    width: auto;
+    height: 300px;
+} */
+
+.post {
+    box-sizing: border-box;
+    flex: 0 0 45%;
+    width: 700px;
+    margin-bottom: 20px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: whitesmoke;
+
+}
+
+/* .ListPost {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: aliceblue;
+    margin-left:     5px;
+} */
+
+.ListPost {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: aliceblue;
+}
+  
+.Post-Container {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    display: none;
+}
+.Post-Column {
+    /* background-color: red; */
+    height: auto;
+    /* padding: 10px; */
+    margin-bottom: 1%;
+}
+
+
+.post img{
+    /* max-width: auto; */
+    /* width: auto; */
+    width: 1100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+
+    background-color: bisque;
+}
+
+.post:hover {
+    background-color: bisque;
+    /* background-color:  grey; */
+    /* background-color: rgba(0, 0, 0, 0.2);  */
+    /* Add the overlay color you desire */
+}
+
+.post-title {
+    color: black;
+    text-align: center;
+    font-family: 'Onest', sans-serif;
+    font-style: normal;
+    font-size: 26px;
+    font-weight: 700; 
+    margin: 10px 0;
+    transition: color 0.5s; /* Transition for color change */
+    animation: colorAppear 0.5s ease-in-out 10s forwards; /* Delayed color animation */
+}
+.ql-editor p img {
+    display: none;   
+}
+.post-title:hover {
+    color: red;
+}
+
+.post-info {    
+    display: inline;
+    /* color: black; */
+}
+
+.post-info:hover {
+    text-decoration: underline;
+    transition-duration: 0.5s;
+    font-size: 18px;
+}
+
+.post:nth-child(2n) {
+    margin-left: 1%; /* Adjust the percentage based on your preference */
+}
+
+/* .post:last-child {
+    margin-left: 0;
+} */
+
+/*========================== Post List ==============================*/
+
+.tags {
+    margin-top: auto;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #ccc;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+    transition: background-color 1s, color 1s; /* Add transitions for color changes */
+}
+.icon-tag {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.icon-tag img {
+    width: 16px; /* Adjust the width as needed */
+    height: 16px; /* Adjust the height as needed */
+}
+
+.tag:hover {
+    background-color: red;
+    color: greenyellow;
+}
+
+/*========================== Tag Name ==============================*/
+
+.post-info.two-line-preview {
+    max-height: 10em; /* Adjust the height as needed */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+
+#header{
+    position: fixed !important;
+}
+
+#category {
+    /* background-color: #4CAF50; */
+    border-right: 1px solid white;
+    /* border-left: 1px solid white; */
+}
+
+#category:hover {
+    background-color: #4CAF50;
+}
+
+#taskbar .p-2 {
+    border-right: 1px solid white;
+    padding-right: 20px;
+    padding-left: 20px; 
+    font-weight: 700;
+}
+
+.p-logo {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.p-2:hover {
+    color: black;
+    background-color: white;
+    text-decoration: underline;
+}
+/*========================== Header ==============================*/
+.icon {
+	cursor: pointer;
+	margin-right: 10px; 
+	line-height: 60px;
+    margin-bottom: 20px;
+}
+.icon span {
+	background: #f00;
+	padding: 7px;
+	border-radius: 50%;
+	color: #fff;
+	vertical-align: top;
+	margin-left: -25px;
+}
+.icon img {
+	display: inline-block;
+	width: 40px;
+	margin-top: 20px;
+}
+.icon:hover {
+	opacity: .7;
+}
+
+.logo {
+	flex: 1;
+	margin-left: 50px;
+	color: #eee;
+	font-size: 20px;
+	font-family: monospace;
+}
+
+.notifi-box {
+	width: 300px;
+	height: 0px;
+	opacity: 0;
+	position: absolute;
+	top: 63px;
+	right: 35px;
+	transition: 1s opacity, 250ms height;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+}
+.notifi-box h2 {
+	font-size: 14px;
+	padding: 10px;
+	border-bottom: 1px solid #eee;
+	color: #999;
+}
+.notifi-box h2 span {
+	color: #f00;
+}
+.notifi-item {
+	display: flex;
+	border-bottom: 1px solid #eee;
+	padding: 15px 5px;
+	margin-bottom: 15px;
+	cursor: pointer;
+}
+.notifi-item:hover {
+	background-color: #eee;
+}
+.notifi-item img {
+	display: block;
+	width: 50px;
+	margin-right: 10px;
+	border-radius: 50%;
+}
+.notifi-item .text h4 {
+	color: #777;
+	font-size: 16px;
+	margin-top: 10px;
+}
+.notifi-item .text p {
+	color: #aaa;
+	font-size: 12px;
+}
+
+/*========================== Notification ==============================*/

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="src/giveAward.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="image/png" href="./img/Logo.png" />
+    <title>Home</title>
+</head>
+
+<body class=" bg-slate-700">
+    <!-- Header  -->
+    <header class="flex items-center justify-between w-full bg-black text-white" id="header">
+        <!-- Logo and title -->
+        <div class="flex items-center" id="taskbar">
+            <!-- <a href="/home.html" class="items-start justify-center">
+                <img src=" ./img/Logo.png" alt="logo" class="w-16 h-auto">
+            </a> -->
+            
+            <a href="/home2.html" class="p-logo" style="font-size: 35px; font-weight: 700; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: bisque; margin-right: 10px;">
+                FPT BLOG
+            </a>
+            
+            <a href="/create.html" class="p-2" style="border-left: 1px solid white;">
+                New post
+            </a>
+            
+            <a href="/bestartice.html" class="p-2">
+                Best articles
+            </a>
+
+            <a href="teacherPage.html" class="p-2" id="teacherPage">
+                Post Request
+            </a>
+        </div>
+        <div class="p-1 flex">
+            <div class="flex items-center justify-center">
+                <div class="mx-5">
+                    <a href="profile.html" class="mx-5">
+                    <img src="https://www.pngitem.com/pimgs/m/375-3757223_free-icon-download-people-avatar-icon-transparent-background.png"
+                        alt="logo" class="w-10 h-10 rounded-full cursor-pointer hover:scale-110">
+                    </a>
+                </div>
+
+                <div class="pr-2">
+
+                    <div class="cursor-pointer">
+                        <a href="/login.html">Log Out</a>
+                    </div>
+
+                </div>
+            </div>
+            
+            <script>
+                var prevScrollPos = window.pageYOffset;
+                var header = document.getElementById("header");
+        
+                window.onscroll = function() {
+                    var currentScrollPos = window.pageYOffset;
+                    
+                    if (prevScrollPos > currentScrollPos) {
+                        // Scrolling up
+                        header.style.top = "0";
+                    } else {
+                        // Scrolling down
+                        header.style.top = "-100px"; // Adjust the value based on your header height
+                    }
+        
+                    prevScrollPos = currentScrollPos;
+                }
+            </script>
+        </div>
+
+    </header>
+    <section class="bg-white dark:bg-gray-900" id="baner">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+            <h1
+                class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+                Welcome to FPT BLOG</h1>
+            <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Here at
+                Where knowledge meets passion</p>
+            <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            </div>
+        </div>
+    </section>
+    <!-- Main  -->
+    <Main class="main">
+        <div class="grid grid-cols-4">
+
+            <!--slide left  -->
+            <div class="col-span-3">
+                <!-- selection  -->
+                <!-- <div class="w-full pt-0.5 bg-gray-300"></div> -->
+
+                <!-- List Approved Posts | Displayed from home.js -->
+                <div class="grid grid-cols-3 gap-4 bg-white" id="post">
+
+                    <div class="col-span-6">
+                        <div class="main-loading">
+                            <div class="container-loading">
+                                <div class="wrapper">
+                                   <div class="loader">
+                                      <div class="dot"></div>
+                                   </div>
+                                   <div class="loader">
+                                      <div class="dot"></div>
+                                   </div>
+                                   <div class="loader">
+                                      <div class="dot"></div>
+                                   </div>
+                                   <div class="loader">
+                                      <div class="dot"></div>
+                                   </div>
+                                   <div class="loader">
+                                      <div class="dot"></div>
+                                   </div>
+                                   <div class="loader">
+                                      <div class="dot"></div>
+                                   </div>
+                                </div>
+                                <div class="text">
+                                   Please wait
+                                </div>
+                             </div>
+                            <style>
+                                @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+                                *{
+                                margin: 0;
+                                padding: 0;
+                                box-sizing: border-box;
+                                }
+                                .main-loading{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                min-height: 100vh;
+                                text-align: center;
+                                background: white;
+                                }
+                                .container-loading{
+                                position: relative;
+                                width: 100%;
+                                display: flex;
+                                justify-content: center;
+                                }
+                                .wrapper{
+                                position: absolute;
+                                top: -35px;
+                                transform: scale(1.5);
+                                }
+                                .loader{
+                                height: 25px;
+                                width: 1px;
+                                position: absolute;
+                                animation: rotate 3.5s linear infinite;
+                                }
+                                .loader .dot{
+                                top: 30px;
+                                height: 7px;
+                                width: 7px;
+                                background: black;
+                                border-radius: 50%;
+                                position: relative;
+                                }
+                                .text{
+                                position: absolute;
+                                bottom: -85px;
+                                font-size: 25px;
+                                font-weight: 400;
+                                font-family: 'Poppins',sans-serif;
+                                color: black;
+                                }
+                                @keyframes rotate {
+                                30%{
+                                    transform: rotate(220deg);
+                                }
+                                40%{
+                                transform: rotate(450deg);
+                                    opacity: 1;
+                                }
+                                75%{
+                                transform: rotate(720deg);
+                                opacity: 1;
+                                }
+                                76%{
+                                opacity: 0;
+                                }
+                                100%{
+                                opacity: 0;
+                                transform: rotate(0deg);
+                                }
+                                }
+                                .loader:nth-child(1){
+                                animation-delay: 0.15s;
+                                }
+                                .loader:nth-child(2){
+                                animation-delay: 0.3s;
+                                }
+                                .loader:nth-child(3){
+                                animation-delay: 0.45s;
+                                }
+                                .loader:nth-child(4){
+                                animation-delay: 0.6s;
+                                }
+                                .loader:nth-child(5){
+                                animation-delay: 0.75s;
+                                }
+                                .loader:nth-child(6){
+                                animation-delay: 0.9s;
+                                }
+                            </style>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- End Post -->
+
+            </div>
+
+            <!--slide right  -->
+            <div class="bg-white boder border-l-2">
+                <!-- recommend Topics  -->
+                <div class="ml-8 my-4">
+
+                    <div class="font-semibold">
+                        Recommend Topics
+                    </div>
+
+                    <!-- Tag Name -->
+                    <div class="grid grid-cols-2 gap-4 flex-wrap mt-4">
+
+                        
+                    </div>
+
+                    <div class="mt-4 text-green-600">
+                        See more topics
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- <div class="center">
+            <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a href="#" class="active">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
+            </div>
+          </div> -->
+    </Main>
+
+    <!-- footer  -->
+    <footer class="bg-white rounded-lg shadow dark:bg-gray-900" id="footer">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0">
+                    <img src="./img/Logo.png" class="h-8 mr-3" alt="Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">FPT Blog</span>
+                </a>
+                <ul id="about"
+                    class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <li>
+                        <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="mr-4 hover:underline md:mr-6 ">Licensing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400" id="fpt-blog">© 2023 <a
+                    href="https://flowbite.com/" class="hover:underline">FPT Blog</a>. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+    <script type="module" src='./js/giveAward.js'></script>
+    <script type="module" src='./js/tag.js'></script>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</html>
